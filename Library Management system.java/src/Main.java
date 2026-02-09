@@ -14,10 +14,8 @@ public class Main {
                 System.out.println("6. Search Book");
                 System.out.println("7. Logout & Exit");
                 System.out.print("Choose: ");
-//                int choice = sc.nextInt();
-                int choice = Integer.parseInt(InutHelper.readInt("Enter your Choice"));
 
-//                sc.nextLine();
+                int choice = Integer.parseInt(InutHelper.readInt("Enter your Choice"));
 
 
                 switch (choice) {
@@ -36,3 +34,4 @@ public class Main {
         }
     }
 }
+
