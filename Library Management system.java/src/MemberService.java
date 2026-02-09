@@ -3,10 +3,9 @@ import java.util.Scanner;
 public class MemberService {
     public static void addMember() {
         try (Connection conn = Database.getConnection()) {
-//            System.out.print("Enter Member Name: ");
+
             String name = InutHelper.readInt("{Enter Member Name");
 
-//            System.out.print("Enter Phone: ");
             String phone = InutHelper.readInt("Enter Phone: ");
 
             String q = "INSERT INTO members (name, phone) VALUES (?, ?)";
@@ -20,3 +19,4 @@ public class MemberService {
         }
     }
 }
+
