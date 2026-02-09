@@ -3,13 +3,11 @@ import java.util.Scanner;
 public class BookService {
     public static void addBook() {
         try (Connection conn = Database.getConnection()) {
-//            System.out.print("Enter Book Title: ");
+            
             String title = InutHelper.readInt("Enter Book Title");
 
-//            System.out.print("Enter Author: ");
             String author = InutHelper.readInt("Enter Author");
 
-//            System.out.print("Enter Quantity: ");
             int qty =Integer.parseInt(InutHelper.readInt("Enter Quantity"));
 
             String query = "INSERT INTO books (title, author, quantity) VALUES (?, ?, ?)";
@@ -42,7 +40,7 @@ public class BookService {
     public static void searchBook() {
         try (Connection conn = Database.getConnection()) {
 
-//            System.out.print("Enter Book Title Keyword: ");
+
             String keyword = InutHelper.readInt("Enter Book Title Keyword");
 
             String q = "SELECT * FROM books WHERE title LIKE ?";
@@ -65,3 +63,4 @@ public class BookService {
         }
     }
 }
+
