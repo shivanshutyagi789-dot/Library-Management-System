@@ -3,9 +3,8 @@ import java.util.Scanner;
 public class AuthService {
     public static boolean login() {
         try  {
-//            System.out.print("Enter Username: ");
+
             String username = InutHelper.readInt("Enter username");
-//            System.out.print("Enter Password: ");
             String password = InutHelper.readInt("Enter password");
             String query = "SELECT * FROM admins WHERE username=? AND password=?";
 
@@ -33,3 +32,4 @@ public class AuthService {
         }
     }
 }
+
